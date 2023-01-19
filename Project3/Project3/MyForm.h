@@ -13,7 +13,6 @@
 #include <vector>
 #include "Hamming.h"
 
-
 using namespace msclr::interop;
 namespace Project3 {
 
@@ -342,12 +341,12 @@ namespace Project3 {
 		String^ sourcePath1 = initialPicture1;
 		Image1.sourcePath = marshal_as<std::string>(sourcePath1);
 		Image1.apply_filters();
-		pictureBox1->ImageLocation = "C:\\pooProg\\filteredImages\\poza1-1.png";
+		pictureBox1->ImageLocation = "pooProg\\filteredImages\\poza1-1.png";
 		Filter_Image Image2(2);
 		String^ sourcePath2 = initialPicture2;
 		Image2.sourcePath = marshal_as<std::string>(sourcePath2);
 		Image2.apply_filters();
-		pictureBox2->ImageLocation = "C:\\pooProg\\filteredImages\\poza2-1.png";
+		pictureBox2->ImageLocation = "pooProg\\filteredImages\\poza2-1.png";
 		blur = true;
 		clar = false;
 		bandw = false;
@@ -357,12 +356,12 @@ namespace Project3 {
 		String^ sourcePath1 = initialPicture1;
 		Image1.sourcePath = marshal_as<std::string>(sourcePath1);
 		Image1.apply_filters();
-		pictureBox1->ImageLocation = "C:\\pooProg\\filteredImages\\poza1-2.png";
+		pictureBox1->ImageLocation = "pooProg\\filteredImages\\poza1-2.png";
 		Filter_Image Image2(2);
 		String^ sourcePath2 = initialPicture2;
 		Image2.sourcePath = marshal_as<std::string>(sourcePath2);
 		Image2.apply_filters();
-		pictureBox2->ImageLocation = "C:\\pooProg\\filteredImages\\poza2-2.png";
+		pictureBox2->ImageLocation = "pooProg\\filteredImages\\poza2-2.png";
 		blur = false;
 		clar = true;
 		bandw = false;
@@ -372,12 +371,12 @@ namespace Project3 {
 		String^ sourcePath1 = initialPicture1;
 		Image1.sourcePath = marshal_as<std::string>(sourcePath1);
 		Image1.apply_filters();
-		pictureBox1->ImageLocation = "C:\\pooProg\\filteredImages\\poza1-0.png";
+		pictureBox1->ImageLocation = "pooProg\\filteredImages\\poza1-0.png";
 		Filter_Image Image2(2);
 		String^ sourcePath2 = initialPicture2;
 		Image2.sourcePath = marshal_as<std::string>(sourcePath2);
 		Image2.apply_filters();
-		pictureBox2->ImageLocation = "C:\\pooProg\\filteredImages\\poza2-0.png";
+		pictureBox2->ImageLocation = "pooProg\\filteredImages\\poza2-0.png";
 		blur = false;
 		clar = false;
 		bandw = true;
@@ -386,18 +385,18 @@ namespace Project3 {
 		if (pictureBox1->ImageLocation != initialPicture1)
 			pictureBox1->ImageLocation = initialPicture1;
 		else {
-			if (blur)pictureBox1->ImageLocation = "C:\\pooProg\\filteredImages\\poza1-1.png";
-			else if (clar)pictureBox1->ImageLocation = "C:\\pooProg\\filteredImages\\poza1-2.png";
-			else if (bandw)pictureBox1->ImageLocation = "C:\\pooProg\\filteredImages\\poza1-0.png";
+			if (blur)pictureBox1->ImageLocation = "pooProg\\filteredImages\\poza1-1.png";
+			else if (clar)pictureBox1->ImageLocation = "pooProg\\filteredImages\\poza1-2.png";
+			else if (bandw)pictureBox1->ImageLocation = "pooProg\\filteredImages\\poza1-0.png";
 		}
 	}
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (pictureBox1->ImageLocation != initialPicture1)
 			pictureBox1->ImageLocation = initialPicture1;
 		else {
-			if (blur)pictureBox1->ImageLocation = "C:\\pooProg\\filteredImages\\poza1-1.png";
-			else if (clar)pictureBox1->ImageLocation = "C:\\pooProg\\filteredImages\\poza1-2.png";
-			else if (bandw)pictureBox1->ImageLocation = "C:\\pooProg\\filteredImages\\poza1-0.png";
+			if (blur)pictureBox1->ImageLocation = "pooProg\\filteredImages\\poza1-1.png";
+			else if (clar)pictureBox1->ImageLocation = "pooProg\\filteredImages\\poza1-2.png";
+			else if (bandw)pictureBox1->ImageLocation = "pooProg\\filteredImages\\poza1-0.png";
 		}
 	}
 		   private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -413,12 +412,12 @@ namespace Project3 {
 		std::string img2 = marshal_as<std::string>(pictureBox2->ImageLocation);
 		Images Image;
 		Image.resize_Images(img1, img2);
-		if (Image.k == 0)img1 = "C:\\pooProg\\Resized_Image1.png";
-		else img2 = "C:\\pooProg\\Resized_Image2.png";
+		if (Image.k == 0)img1 = "pooProg\\Resized_Image1.png";
+		else img2 = "pooProg\\Resized_Image2.png";
 		Hamming Hamming(img1, img2);
 		Hamming.master();
 		this->label2->Visible = false;
-		this->pictureBox3->ImageLocation = "C:\\pooProg\\test.jpg";
+		this->pictureBox3->ImageLocation = "pooProg\\test.jpg";
 		this->pictureBox3->Visible = true;
 		this->label3->Text = gcnew String(Hamming.print.data());
 		this->label3->Visible = true;

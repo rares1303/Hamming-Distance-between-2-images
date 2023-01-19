@@ -87,7 +87,7 @@ public:
 
 		
 
-		cv::imwrite("C:\\pooProg\\test.jpg", output_image);
+		cv::imwrite("pooProg\\test.jpg", output_image);
 
 		cv::waitKey(0);
 	}

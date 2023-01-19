@@ -23,11 +23,11 @@ public:
 
         //----------median blur
         medianBlur(SourceImage, FilteredImage, 7);
-        imwrite("C:\\pooProg\\filteredImages\\poza"+imgcs+"-1.png", FilteredImage);
+        imwrite("pooProg\\filteredImages\\poza"+imgcs+"-1.png", FilteredImage);
 
         //----------bilateral filter
         bilateralFilter(SourceImage, FilteredImage, 37, 37 * 2, 37 / 2);
-        imwrite("C:\\pooProg\\filteredImages\\poza" + imgcs + "-2.png", FilteredImage);
+        imwrite("pooProg\\filteredImages\\poza" + imgcs + "-2.png", FilteredImage);
 
         //----------wiener filter
         cv::Mat SourceImageGrayscale = imread(sourcePath, cv::IMREAD_GRAYSCALE);
@@ -70,7 +70,7 @@ public:
                     );
             }
         }
-        imwrite("C:\\pooProg\\filteredImages\\poza" + imgcs + "-0.png", FilteredImage);
+        imwrite("pooProg\\filteredImages\\poza" + imgcs + "-0.png", FilteredImage);
     }
 };
 

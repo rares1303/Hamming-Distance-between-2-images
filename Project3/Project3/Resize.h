@@ -20,14 +20,14 @@ public:
 
 		if (image.size().width > image2.size().width && image.size().height > image2.size().height) {
 			resize(image, resized_down1, cv::Size(image2.size().width, image2.size().height), cv::INTER_LINEAR);
-			imwrite("C:\\pooProg\\Resized_Image1.png", resized_down1);
-			imwrite("C:\\pooProg\\Image_2.png", image2);
+			imwrite("pooProg\\Resized_Image1.png", resized_down1);
+			imwrite("pooProg\\Image_2.png", image2);
 			this->k = 0;
 		}
 		else {
 			resize(image2, resized_down2, cv::Size(image.size().width, image.size().height), cv::INTER_LINEAR);
-			imwrite("C:\\pooProg\\Image_1.png", image);
-			imwrite("C:\\pooProg\\Resized_Image2.png", resized_down2);
+			imwrite("pooProg\\Image_1.png", image);
+			imwrite("pooProg\\Resized_Image2.png", resized_down2);
 			this->k = 1;
 		}
 

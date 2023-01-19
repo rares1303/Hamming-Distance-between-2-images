@@ -118,6 +118,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>opencv_world412.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>Main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
